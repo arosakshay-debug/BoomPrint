@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔥 HIGH-PERFORMANCE SEO META TAGS FOR GOOGLE SEARCH -->
+    <title>BoomPrint — DIY Speaker Box Volume Calculator & Custom Build Guides</title>
+    <meta name="description" content="Free DIY speaker box volume calculator in liters. Easy custom subwoofer box design plans, 12V lithium battery wiring diagrams, and high-performance component guides.">
+    <meta name="keywords" content="boomprint, diy speaker box calculator, custom speaker building, subwoofer box design, diy bluetooth speaker, speaker box volume liters, 30w speaker build, cheap diy subwoofer, custom enclosure layout">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Premium Google Fonts & Icons (Material Symbols Rounded) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        :root {
+            --bg-surface: #f8f9fa;
+            --surface: #ffffff;
+            --primary: #1a73e8; /* Google App Blue */
+            --primary-container: #e8f0fe;
+            --text-main: #202124;
+            --text-sub: #5f6368;
+            --border: #dadce0;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            --transition: all 0.2s ease-in-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-surface);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* --- Premium Navigation Header --- */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 24px;
+        }
+        
+        /* --- Premium Custom Logo --- */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.7px;
+        }
+        .logo-icon {
+            color: var(--primary);
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-container);
+            padding: 6px;
+            border-radius: 12px;
+        }
+        .logo span.brand-accent {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-sub);
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- Layout Structure --- */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 32px;
+        }
+
+        @media (max-width: 900px) {
+            main { grid-template-columns: 1fr; }
+        }
+
+        /* --- Premium App Cards --- */
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 28px;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+        .card:hover {
+            box-shadow: var(--shadow);
+            border-color: transparent;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 span { color: var(--primary); }
+        p { color: var(--text-sub); font-size: 15px; margin-bottom: 20px; }
+
+        /* --- Dynamic Calculator Styling --- */
+        .input-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .field label { font-size: 12px; font-weight: 600; color: var(--text-sub); }
+        .field input {
+            padding: 12px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            font-size: 15px;
+            outline: none;
+            background: var(--bg-surface);
+            transition: var(--transition);
+        }
+        .field input:focus {
+            border-color: var(--primary);
+            background: var(--surface);
+            box-shadow: 0 0 0 3px var(--primary-container);
+        }
+        
+        .calc-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .calc-btn:hover { background: #1557b0; }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: var(--radius-md);
+            background: var(--primary-container);
+            color: #1557b0;
+            font-weight: 500;
+            display: none;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        /* --- Custom Guide Lists --- */
+        .guide-item {
+            display: flex;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .guide-item:last-child { border: none; padding-bottom: 0; }
+        .guide-meta { flex: 1; }
+        .guide-tag {
+            background: #ebeeef;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .guide-title { font-weight: 600; font-size: 16px; margin-bottom: 6px; color: var(--text-main); }
+        .guide-action {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 8px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Clean Header Layout with Custom Logo -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="material-symbols-rounded logo-icon">blur_on</span>Boom<span class="brand-accent">Print</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Speaker Box Calculator</a></li>
+                <li><a href="#">Enclosure Designs</a></li>
+                <li><a href="#">Wiring Diagrams</a></li>
+                <li><a href="#">Custom Blueprints</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- App Grid Ecosystem -->
+    <main>
+        <!-- Left Side Primary Tool & Articles -->
+        <section>
+            <!-- Hero Welcome Card Layout -->
+            <div class="card" style="background: linear-gradient(135deg, #e8f0fe 0%, #e2ecff 100%); border: none;">
+                <span class="guide-tag" style="background: var(--primary); color: white;">FREE AUDIO TOOLS</span>
+                <h1 style="font-size: 26px; font-weight: 700; margin: 8px 0 12px 0;">How to Calculate Speaker Box Volume in Liters</h1>
+                <p style="margin-bottom: 0; color: #3c4043;">Welcome to the ultimate tool for <strong>custom speaker building</strong>. Skip confusing manual physics math equations. Input your custom enclosure parameters below to get the exact internal volume calculation and smart tuning layout tips for your speaker box design instantly.</p>
+            </div>
+
+            <!-- Fully Functional Box Volume Calculator Component -->
+            <div class="card">
+                <h2><span class="material-symbols-rounded">calculate</span>Speaker Box Volume Calculator</h2>
+                <p>Find the exact internal volume of your custom subwoofer box, portable boombox, or repurposed paint bucket configuration. Enter your internal height, width, and depth metrics below.</p>
+                
+                <div class="input-group">
+                    <div class="field">
+                        <label for="height">Internal Height (cm)</label>
+                        <input type="number" id="height" placeholder="e.g. 30">
+                    </div>
+                    <div class="field">
+                        <label for="width">Internal Width (cm)</label>
+                        <input type="number" id="width" placeholder="e.g. 20">
+                    </div>
+                    <div class="field">
+                        <label for="depth">Internal Depth (cm)</label>
+                        <input type="number" id="depth" placeholder="e.g. 20">
+                    </div>
+                </div>
+
+                <button class="calc-btn" onclick="calculateVolume()">
+                    <span class="material-symbols-rounded">analytics</span>Calculate Speaker Box Liters
+                </button>
+
+                <div class="result-box" id="result"></div>
+            </div>
+
+            <!-- Highly-Targeted Low Competition Build Guides -->
+            <div class="card">
+                <h2><span class="material-symbols-rounded">auto_stories</span>Step-by-Step Custom Speaker Build Guides</h2>
+                
+                <div class="guide-item">
+                    <div class="guide-meta">
+                        <span class="guide-tag">DIY Subwoofer</span>
+                        <div class="guide-title">How to Build a Budget Subwoofer Box for a 30W Component Speaker</div>
+                        <p style="font-size: 13px; margin-bottom: 4px;">Learn how to properly seal repurposed objects like plastic paint buckets to prevent air pressure leaks and maximize deep bass response.</p>
+                        <a href="#" class="guide-action">View Free Design Plan <span class="material-symbols-rounded" style="font-size:16px">arrow_forward</span></a>
+                    </div>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-meta">
+                        <span class="guide-tag">Wiring Diagram</span>
+                        <div class="guide-title">12V Lithium Battery Pack Wiring for Custom Bluetooth Speakers</div>
+                        <p style="font-size: 13px; margin-bottom: 4px;">A clean, beginner-friendly wiring roadmap to safely connect amp boards with a BMS protection circuit module.</p>
+                        <a href="#" class="guide-action">View Wiring Diagram <span class="material-symbols-rounded" style="font-size:16px">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Sidebar Monetization Elements -->
+        <aside>
+            <!-- Product Conversion Element: PDF Downloads -->
+            <div class="card" style="border-color: #ceead6; background: #f1f8f5;">
+                <h2 style="color: #137333;"><span class="material-symbols-rounded" style="color: #137333;">download_shortcut</span>Premium Cutting Blueprints</h2>
+                <p style="color: #137333; font-size: 14px;">Download high-accuracy 3D panel cut sheets, interior brace placements, and structural dimensions for premium acoustic performance.</p>
+                <button class="calc-btn" style="background: #137333;">
+                    <span class="material-symbols-rounded">shopping_bag</span>Buy PDF Plans ($3.99)
+                </button>
+            </div>
+
+            <!-- Affiliate Purchases Monetization Card -->
+            <div class="card">
+                <h2><span class="material-symbols-rounded">shopping_cart</span>Best DIY Speaker Components</h2>
+                <p style="font-size: 13px;">Tested and verified hardware components matching our baseline blueprints flawlessly.</p>
+                
+                <div class="guide-item">
+                    <div class="guide-meta">
+                        <div class="guide-title" style="font-size:14px; margin-bottom: 2px;">30W Full-Range Woofer Driver</div>
+                        <p style="font-size: 12px; margin-bottom: 4px;">Robust sub bass frequency handling, perfect for small custom speaker boxes.</p>
+                        <a href="#" class="guide-action" style="font-size: 12px;">Check Price Online <span class="material-symbols-rounded" style="font-size:14px">launch</span></a>
+                    </div>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-meta">
+                        <div class="guide-title" style="font-size:14px; margin-bottom: 2px;">TPA3116 2.1 Bluetooth Amplifier Board</div>
+                        <p style="font-size: 12px; margin-bottom: 4px;">Low noise floor distortion with independent sub-woofer dials.</p>
+                        <a href="#" class="guide-action" style="font-size: 12px;">Check Price Online <span class="material-symbols-rounded" style="font-size:14px">launch</span></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Calculator Application Logic Script -->
+    <script>
+        function calculateVolume() {
+            const h = parseFloat(document.getElementById('height').value);
+            const w = parseFloat(document.getElementById('width').value);
+            const d = parseFloat(document.getElementById('depth').value);
+            const resultBox = document.getElementById('result');
+
+            if (isNaN(h) || isNaN(w) || isNaN(d) || h <= 0 || w <= 0 || d <= 0) {
+                resultBox.style.display = 'block';
+                resultBox.style.background = '#fce8e6';
+                resultBox.style.color = '#c5221f';
+                resultBox.innerHTML = `<span style="display:flex; align-items:center; gap:8px;"><span class="material-symbols-rounded">error</span> Enter valid dimensions to calculate speaker box size.</span>`;
+                return;
+            }
+
+            // Standard Cubic Formula: Liters = (Height * Width * Depth) / 1000
+            const volumeLiters = ((h * w * d) / 1000).toFixed(2);
+            
+            let advice = "";
+            if(volumeLiters < 5) {
+                advice = "Great compact size for a portable DIY Bluetooth speaker or micro desktop monitors.";
+            } else if(volumeLiters >= 5 && volumeLiters <= 15) {
+                advice = "Excellent volume matching a 30W-50W custom subwoofer box or a highly responsive paint bucket speaker design.";
+            } else {
+                advice = "Large acoustic enclosure capacity. Ideal for stationary home theater bookshelf speaker cabinets.";
+            }
+
+            resultBox.style.display = 'block';
+            resultBox.style.background = 'var(--primary-container)';
+            resultBox.style.color = '#1557b0';
+            resultBox.innerHTML = `
+                <div style="display:flex; flex-direction:column; gap:6px;">
+                    <strong style="font-size:16px; display:flex; align-items:center; gap:6px;">
+                        <span class="material-symbols-rounded">check_circle</span> Box Volume: ${volumeLiters} Liters
+                    </strong>
+                    <span style="font-size:13px; opacity:0.9;">Official BoomPrint Layout Recommendation: ${advice}</span>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
