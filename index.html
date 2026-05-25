@@ -217,6 +217,29 @@
             margin-top: 8px;
         }
 
+        /* Alert Callout Styling */
+        .alert-box {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffb300;
+            padding: 16px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-top: 16px;
+        }
+        .alert-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #b78103;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+        .alert-desc {
+            font-size: 13px;
+            color: #664d03;
+            margin-bottom: 0;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(4px); }
             to { opacity: 1; transform: translateY(0); }
@@ -276,6 +299,23 @@
             <div class="card">
                 <h2><span class="material-symbols-rounded">auto_stories</span>Step-by-Step Custom Speaker Build Guides</h2>
                 
+                <div class="guide-item" id="jbl-21-project">
+                    <div class="guide-meta">
+                        <span class="guide-tag" style="background: var(--primary-container); color: var(--primary);">Premium 2.1 Setup</span>
+                        <div class="guide-title">Building a High-Fidelity 200W System with JBL Coaxials & TPA3116D2</div>
+                        <p style="font-size: 13px; margin-bottom: 4px;">Learn how to properly isolate a high-power 2.1 channel amplifier board. For best acoustic imaging, house your left/right JBL coaxial units in a sealed internal chamber completely packed with acoustic polyfill, keeping them safe from high subwoofer displacement pressures.</p>
+                        
+                        <div class="alert-box">
+                            <div class="alert-title">
+                                <span class="material-symbols-rounded" style="font-size: 16px;">warning</span> Critical Power System Note
+                            </div>
+                            <p class="alert-desc">Always drive this TPA3116D2 amplifier board using a dedicated 24V 5A DC SMPS power supply. Standard 12V supplies bottleneck the chip, causing sub bass frequencies to distort or drop out completely at high volumes.</p>
+                        </div>
+                        
+                        <a href="#jbl-coaxial-link" class="guide-action">View Project Layout Components <span class="material-symbols-rounded" style="font-size:16px">arrow_downward</span></a>
+                    </div>
+                </div>
+
                 <div class="guide-item">
                     <div class="guide-meta">
                         <span class="guide-tag">DIY Subwoofer</span>
@@ -309,6 +349,22 @@
                 <h2><span class="material-symbols-rounded">shopping_cart</span>Best DIY Speaker Components</h2>
                 <p style="font-size: 13px;">Tested and verified hardware components matching our baseline blueprints flawlessly.</p>
                 
+                <div class="guide-item" id="jbl-coaxial-link">
+                    <div class="guide-meta">
+                        <div class="guide-title" style="font-size:14px; margin-bottom: 2px;">JBL A352Hi 6.5" Coaxial Speakers</div>
+                        <p style="font-size: 12px; margin-bottom: 4px;">Handles 47W RMS with integrated PEI balanced dome tweeters for crisp vocal highs.</p>
+                        <a href="https://www.amazon.in/dp/B07RMRYF5C" target="_blank" rel="noopener noreferrer" class="guide-action" style="font-size: 12px; color: var(--text-main);">View on Amazon India <span class="material-symbols-rounded" style="font-size:14px">launch</span></a>
+                    </div>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-meta">
+                        <div class="guide-title" style="font-size:14px; margin-bottom: 2px;">MakerHawk TPA3116D2 2.1 Board</div>
+                        <p style="font-size: 12px; margin-bottom: 4px;">High output efficiency with onboard independent subwoofer control knobs.</p>
+                        <a href="https://www.amazon.in/dp/B08H1N7SSC" target="_blank" rel="noopener noreferrer" class="guide-action" style="font-size: 12px; color: var(--text-main);">View on Amazon India <span class="material-symbols-rounded" style="font-size:14px">launch</span></a>
+                    </div>
+                </div>
+
                 <div class="guide-item">
                     <div class="guide-meta">
                         <div class="guide-title" style="font-size:14px; margin-bottom: 2px;">30W Full-Range Woofer Driver</div>
